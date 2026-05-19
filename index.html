@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>စိတ်မဆိုးပါနဲ့တော့နော် မောင် 🥺</title>
+    <style>
+        body { background-color: #fcf0f0; text-align: center; font-family: sans-serif; padding-top: 50px; margin: 0; }
+        h2 { color: #ff4d6d; font-size: 24px; margin-bottom: 30px; padding: 0 10px; line-height: 1.6; }
+        .card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 50px; padding: 0 20px; }
+        .card { background: #fff; padding: 25px 20px; border-radius: 12px; width: 170px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #ffe3e3; font-size: 15px; line-height: 1.6; color: #444; font-weight: 500; }
+        .btn-container { position: relative; height: 100px; }
+        .btn { padding: 12px 28px; font-size: 16px; border-radius: 25px; border: none; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        #yesBtn { background-color: #ff4d6d; color: white; box-shadow: 0 4px 10px rgba(255,77,109,0.3); }
+        #noBtn { background-color: #adadad; color: white; position: absolute; left: 55%; }
+    </style>
+</head>
+<body>
+
+    <h2>စိတ်မဆိုးပါနဲ့တော့နော်... 🥺<br>ငါ့ဘေဘီလေး ဝမ်းနည်းသွားရင် မတကယ်မနေတတ်လို့ပါ... </h2>
+
+    <div class="card-container">
+        <div class="card" style="background-color: #fff9db;">မက စိတ်ဆိုးလို့သာ ပြောလိုက်တာပေါ့ တကယ်တော့ မောင်အဲ့လို လုပ်ပေးတာ မက ပျော်တာပေါ့နော်... မောင့်ကို အရမ်းချစ်လွန်းလို့ပါ 💖</div>
+        <div class="card" style="background-color: #f3f0ff;">စိတ်ဆိုးပြီး မျက်နှာလေးညှိုးသွားတာ တွေ့ရတော့ အသည်းတွေယားပြီး ပိုတောင်ချစ်သွားရပြန်ပြီ အသည်းတုံးလေးရယ် 🥺👉👈</div>
+        <div class="card" style="background-color: #e3faf2;">ကမ္ဘာပေါ်မှာ အချစ်ရဆုံးမို့လို့ စိတ်ကောက်ပြေပြီး ပြုံးလိုက်တော့နော်... ချစ်တယ် ချစ်တယ် ❤️</div>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn" id="yesBtn" onclick="forgive()">❤️ စိတ်ကောက်ပြေပြီ (ပြုံးပြီ)</button>
+        <button class="btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">မရဘူး စိတ်ကောက်တုန်းပဲ</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - 120);
+            var y = Math.random() * (window.innerHeight - 200);
+            if(x < 0) x = 0; if(y < 0) y = 0;
+            document.getElementById('noBtn').style.left = x + 'px';
+            document.getElementById('noBtn').style.top = y + 'px';
+        }
+        function forgive() {
+            alert("အယ်မောင်ပြုံးသွားပြီဆိုတော့ စိတ်မဆိုးတော့ဘူးပေါ့နော်🥹🫶 နောက်လဲအဲ့လိုကလေးဆန်တဲ့အပြု‌မှုလေးတွေနဲ့ ချုပ်ပါအုံးးနော်ဘေဘီ အာဘွား😚💫");
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; 
+        }
+    </script>
+
+</body>
+</html>
