@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>စိတ်ကောက်နေတယ်နော် 😤</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      max-width: 450px;
+      width: 90%;
+      position: relative;
+    }
+    h1 {
+      color: #ff4081;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+    .btn-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      height: 50px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: bold;
+    }
+    #yesBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+    #yesBtn:hover {
+      transform: scale(1.1);
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="mainContainer">
+    <div class="emoji" id="emojiId">😤</div>
+    <h1 id="titleId">လူဆိုးကြီးကို စိတ်ကောက်နေတယ်!</h1>
+    <p id="textId">ဂရုလည်းမစိုက်ဘူး၊ အရေးလည်းမထားဘူး ဟုတ်လား...<br>အခုချက်ချင်း လာချော့မှာလား၊ ပြော။</p>
+    
+    <div class="btn-group">
+      <button id="yesBtn" onclick="forgive()">ချက်ချင်းချော့မယ် 🥰</button>
+      <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">မချော့ဘူး 😜</button>
+    </div>
+  </div>
+
+  <script>
+    // မချော့ဘူး ခလုတ်ကို လိုက်ပြေးစေမယ့် Function
+    function moveButton() {
+      var noBtn = document.getElementById('noBtn');
+      
+      // Screen ရဲ့ အကျယ်နဲ့ အမြင့်အတွင်းမှာပဲ ပြေးအောင် တွက်ချက်ခြင်း
+      var x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
+      var y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
+      
+      // ခလုတ်ရဲ့ တည်နေရာကို ပြောင်းလဲပစ်ခြင်း
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    }
+
+    // ချော့မယ် ခလုတ်နှိပ်လိုက်ရင် ပေါ်လာမယ့်ပုံစံ
+    function forgive() {
+      document.getElementById('emojiId').innerHTML = "🥺❤️";
+      document.getElementById('titleId').innerHTML = "အာဘွားပေးမှ စိတ်ဆိုးပြေမှာနော်...";
+      document.getElementById('titleId').style.color = "#d81b60";
+      document.getElementById('textId').innerHTML = "ကဲ... သိပြီဆိုရင် အခုချက်ချင်း Messenger မှာ လာချော့တော့၊ သွားးး။";
+      
+      // ခလုတ်တွေကို ဖျောက်လိုက်ခြင်း
+      document.getElementById('noBtn').style.display = 'none';
+      document.getElementById('yesBtn').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
